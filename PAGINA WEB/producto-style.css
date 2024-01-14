@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #161d25;
+}
+
+.inicio h3{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+}
+
+.inicio h3 a{
+    color: #ffffff;
+}
+
+.inicio h3 a:hover{
+    color: #e0003e;
+}
+
+header h1{
+    margin-top: 60px;
+    color: #e0003e;
+    text-align: center;
+    font-size: 40px;
+}
+
+.contenedor-principal{
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 80px;
+}
+
+.contenedores{
+    margin-left: 30px;
+}
+
+.contenedor{
+    background-color: #191a1f;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    contain: paint;
+}
+
+h2{
+    margin: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.contenedor-items{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    transition: 0.3s;
+    gap: 20px;
+}
+
+
+.contenedor-items .items{
+    background-color: white;
+    width: 200px;
+    padding: 20px;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.contenedor-items .items:hover{
+    box-shadow: 0 0 60px gray;
+    scale: 1.05;
+}
+
+.contenedor-items .items .titulo{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+}
+
+.contenedor-items .items .precio-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+}
+
+.items .boton-item{
+    display: block;
+    margin: 12px auto;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.carrito{
+    border: 3px solid black;
+    box-shadow: 0 0 10px white;
+    background-color: white;
+    min-width: 370px;
+    margin-top: 150px;
+    margin-left: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.carrito .top-carrito{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-items .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.carrito .carrito-items .carrito-item img{
+    margin-right: 20px;
+}
+
+.carrito .carrito-items .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-items .carrito-item .cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-items .carrito-item .cantidad .carrito-item-cantidad{
+    border: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-items .carrito-item .cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.carrito .carrito-items .carrito-item .carrito-item-precio{
+    font-weight: 600;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.carrito .carrito-items .carrito-item .boton-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    display: block;
+    z-index: 20;
+}
+
+.carrito .carrito-items .carrito-item .boton-eliminar i{
+    pointer-events: none;
+}
+
+.carrito .carrito-total{
+    background-color: white;
+    padding: 10px;
+}
+
+.carrito .carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.carrito .carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carrito .carrito-total .btn-pagar:hover{
+    scale: 1.03;
+    color: #e0003e;
+}
+
+@media screen and (max-width:1500px){
+    .contenedor-principal{
+        display: block;
+    }
+}
